@@ -10,43 +10,41 @@
 <div class="container text-center mt-5">
     <div class="row">
         <div class="col">
-            <img src="{% static 'img\001.png' %}" class="img-fluid" alt="Responsive image">
+            <img src="{{ pokemon.image.url }}" class="img-fluid" alt="Responsive image">
         </div>
     </div>
     <div class="row mt-4 mb-5">
         <table class="table">
             <thead>
-                Bulbasaur #001
+                {{pokemon.name}} #{{pokemon.id}}
             </thead>
             <tbody>
                 <tr class="table-active">
                     <th scope="row">Height</th>
-                    <td>2' 04"</td>
+                    <td>{{pokemon.height}}</td>
                 </tr>
                 <tr>
                     <th scope="row">Weight</th>
-                    <td>15.2 lbs</td>
+                    <td>{{ pokemon.weight}}</td>
                 </tr>
                 <tr>
                     <th scope="row">Category</th>
-                    <td>Seed</td>
+                    <td>{{pokemon.category}}</td>
                 </tr>
                 <tr>
                     <th scope="row">Abilities</th>
-                    <td>Overgrow</td>
+                    <td>{{pokemon.abilities}}</td>
                 </tr>
             </tbody>
         </table>
         <div class="type">
             <span class="type">Type:</span>
-            <button type="button" class="btn btn-success">Grass</button>
+            <button type="button" class="btn btn-success">{{pokemon.weaknesses}}</button>
             <button type="button" class="btn btn-warning">Poison</button>
         </div>
     </div>
     <div class="descr">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore necessitatibus delectus laudantium officia
-        aliquam perspiciatis, minus mollitia accusantium unde quas impedit totam nostrum natus ipsum et sapiente
-        voluptatem provident modi?
+            {{pokemon.descr}}
     </div>
     <!-- <div class="evolution">
 
